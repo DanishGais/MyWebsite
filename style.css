@@ -1,0 +1,298 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://i.pinimg.com/originals/c6/ad/2e/c6ad2ec1fbc13a378d668b5c58a427ed.gif);
+    background-size: cover; /* Ensures the image covers the whole background */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    color: white;
+    line-height: 1.6;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: navy;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-color: rgba(52, 152, 219, 0.8);  /* Semi-transparent overlay for readability */
+    color: rgb(241, 244, 240);
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 70px; /* Space for fixed navbar */
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background-image: url(https://i.pinimg.com/originals/c6/ad/2e/c6ad2ec1fbc13a378d668b5c58a427ed.gif); /* Same background as body */
+    background-size: cover; /* Ensures the image covers the whole hero section */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    z-index: 1; /* Make sure content is above the background */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    animation: fadeIn 3s ease-out;
+}
+
+.hero button {
+    background-color: red;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: red;
+    color: rgb(96, 96, 231);
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: none;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: yellow;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 20px;
+    background-color: navy;
+}
+
+.feature-box {
+    background-color: navy;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+/* Simple Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 80px 20px;
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .features {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .feature-box {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .feature-box h3 {
+        font-size: 1.5rem;
+    }
+}
+/* Custom Styles for Lists */
+
+/* Unordered List (Bullets) */
+ul {
+    list-style-type: disc; /* Makes the list items use round bullets */
+    padding-left: 20px; /* Adds space to the left of the list */
+}
+
+ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Ordered List (Numbering) */
+ol {
+    list-style-type: decimal; /* Default numbering */
+    padding-left: 20px; /* Adds space to the left of the list */
+}
+
+ol li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Custom Bullet Style */
+ul.custom-bullets {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 20px;
+}
+
+ul.custom-bullets li::before {
+    content: "•"; /* Add custom bullet symbol */
+    color: yellow; /* Customize color */
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Custom Number Style */
+ol.custom-numbers {
+    list-style-type: none; /* Remove default numbering */
+    padding-left: 20px;
+}
+
+ol.custom-numbers li::before {
+    content: counter(item) ". "; /* Adds custom numbering */
+    counter-increment: item;
+    color: #3498db; /* Customize number color */
+    font-size: 1.4rem;
+}
+
+#clock {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(111, 239, 125); 
+    text-align: center;
+    margin-top: 30px;
+}
+
+    
+
